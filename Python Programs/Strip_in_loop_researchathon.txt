@@ -1,0 +1,10 @@
+allowed_chars = string.ascii_lowercase + string.digits
+
+cleaned_ingredients = []
+
+for chem in harmful_ingredients:
+    chem = chem.strip().lower()
+    filtered = ''.join([char for char in chem if char in allowed_chars])
+    cleaned_ingredients.append(filtered)
+
+print(cleaned_ingredients)
